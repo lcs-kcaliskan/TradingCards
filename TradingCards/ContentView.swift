@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+       
         VStack(alignment: .center, spacing: 0) {
            
             HStack { //Player Name Top Title
@@ -35,39 +36,66 @@ struct ContentView: View {
                 } .border(Color.green, width: 15)
                   }.frame(height: 500)
                 .padding(.top, -150)
-            
+           
+           
             
             HStack { //Stats
                     VStack{
                         Text("Season Stats:")
                             .font(.system(size: 20, weight: .semibold))
-                        Text("PPG:")
+                            .foregroundColor(.white)
+                        Text("25.6 PPG")
+                            .foregroundColor(.white)
                             .font(.system(size: 20, weight: .semibold))
-                        Text("RPG:")
+                        Text("7.1 RPG")
+                            .foregroundColor(.white)
                             .font(.system(size: 20, weight: .semibold))
-                        Text("AG:")
+                        Text("4.0 AG")
+                            .foregroundColor(.white)
                             .font(.system(size: 20, weight: .semibold))
-                        Text("FG%:")
+                        Text("43.0% FG")
+                            .foregroundColor(.white)
                             .font(.system(size: 20, weight: .semibold))
                     }.padding(20)
                 Spacer()
                     VStack{
-                        Text("Position")
-                            .font(.system(size: 20, weight: .semibold))
-                        Text("Jersey Number")
-                            .font(.system(size: 20, weight: .semibold))
-                        Text("Height")
-                            .font(.system(size: 20, weight: .semibold))
-                        Text("Weight")
-                            .font(.system(size: 20, weight: .semibold))
-                        Text("Age")
-                            .font(.system(size: 20, weight: .semibold))
+                        Text("SG")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20, weight: .bold))
+                        Text("#7")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20, weight: .bold))
+                        Text("6'6")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20, weight: .bold))
+                        Text("223 lbs")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20, weight: .bold))
+                        Text("28")
+                            .foregroundColor(.white)
+                            .font(.system(size: 20, weight: .bold))
                     }.padding(45)
+                    
                      
             }.padding(.top, 0)
+                .background(ZStack {
+                    Image("StatsBackground")
+                        .resizable()
+                        .scaledToFill()
+                        .ignoresSafeArea()
+                        .frame(width: 200, height: 210)
+                        .offset(x: -28, y: 0)
+                       
+                })
         }
-      
+        .background(ZStack {
+            Image("backgroundImage")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+        })
     }
+        
 }
 
 #Preview {
